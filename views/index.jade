@@ -14,9 +14,10 @@ block content
           
     .about
       .description
-        p I work as a Customer Success Engineer at ChartMogul. I also study English Literature part-time at Oxford University.
+        p= description
       if experience
-        .bio
+        .experience
+          h2 Experience
           table
             thead
               tr
@@ -29,3 +30,22 @@ block content
                   td= item.date
                   td= item.role
                   td= item.org
+      if projects
+        .projects
+          h2 Projects
+          table
+            thead
+              tr
+                td Project
+                td Technologies
+                td Organisation
+            tbody
+              for item in projects
+                tr
+                  if item.link
+                    td: a(href="#{item.link}") #{item.name}
+                  else
+                    td= item.name
+                  td= item.technologies
+                  td= item.org  
+

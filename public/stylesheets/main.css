@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
   body .profile a {
     color: #1b94d6;
     text-decoration: none;
@@ -15,10 +15,10 @@ body {
     font-size: 0.9em;
     color: #565b5e;
     line-height: 1.9em;
-    font-weight: 300; }
+    font-weight: 500; }
   body .profile .title div {
     display: inline-block;
-    margin: 0px 0 0 20px;
+    margin: 0 0 0 20px;
     vertical-align: top; }
   body .profile .title .pic {
     width: 100px;
@@ -36,5 +36,34 @@ body {
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
     -webkit-padding-start: 0; }
+    body .profile .title .links li {
+      display: inline-block;
+      margin: 0 5px; }
+      body .profile .title .links li:nth-child(1) {
+        margin-left: 0; }
+  body .profile .about .experience table, body .profile .about .projects table {
+    font-size: 11pt;
+    -webkit-font-smoothing: antialiased;
+    border-collapse: collapse;
+    margin: 0.75em 0 1.5em 0;
+    table-layout: fixed;
+    width: 100%;
+    color: #585858;
+    border: 1px solid #e3e3e3; }
+    body .profile .about .experience table th, body .profile .about .projects table th {
+      padding: 0.75em 0;
+      padding: 0.5em 1em;
+      text-align: left;
+      border-right: 1px solid #e3e3e3;
+      border-bottom: 1px solid #e3e3e3; }
+    body .profile .about .experience table td, body .profile .about .projects table td {
+      border-bottom: 1px solid #e3e3e3;
+      padding: 0.75em 1em; }
+    body .profile .about .experience table tr, body .profile .about .experience table td th, body .profile .about .projects table tr, body .profile .about .projects table td th {
+      vertical-align: middle; }
+    body .profile .about .experience table thead tr, body .profile .about .projects table thead tr {
+      background: #f4f5f5; }
+    body .profile .about .experience table thead td, body .profile .about .projects table thead td {
+      font-weight: 700; }
 
 /*# sourceMappingURL=main.css.map */
