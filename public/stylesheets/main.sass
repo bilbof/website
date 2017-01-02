@@ -1,83 +1,78 @@
-body
+.profile
   padding: 50px
   font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-  // background: #4ECDC4
-  // background: -webkit-linear-gradient(to left, #4ECDC4 , #556270)
-  // background: linear-gradient(to left, #4ECDC4 , #556270)
-          
-  .profile
-    a
-      color: rgb(27, 148, 214)
-      text-decoration: none
-      -webkit-transition: color 0.3s
-      transition: color 0.3s
-      &:hover
-        color: rgb(81, 86, 89)
-
-    h1
-      margin: 35px 0 10px 0
+  a
+    color: rgb(27, 148, 214)
+    text-decoration: none
+    -webkit-transition: color 0.3s
+    transition: color 0.3s
+    &:hover
       color: rgb(81, 86, 89)
-    p, td
-      font-size: 0.9em
-      color: rgb(86, 91, 94)
-      line-height: 1.9em
-      font-weight: 500
-    .title
-      div
+
+  h1
+    margin: 35px 0 10px 0
+    color: rgb(81, 86, 89)
+  p, td
+    font-size: 0.9em
+    color: rgb(86, 91, 94)
+    line-height: 1.9em
+    font-weight: 500
+  .title
+    div
+      display: inline-block
+      margin: 0 0 0 20px
+      vertical-align: top
+
+
+    .pic
+      width: 100px
+      height: 100px
+      border-radius: 20%
+      box-shadow: rgba(0, 0, 0, 0.0976562) 0px 2px 5px
+      border-width: 3px
+      border-style: solid
+      padding: 0px
+      border-color: rgb(255, 255, 255)
+    .links
+      list-style-type: none
+      -webkit-margin-before: 0
+      -webkit-margin-after: 0
+      -webkit-margin-start: 0
+      -webkit-margin-end: 0
+      -webkit-padding-start: 0
+
+      li
         display: inline-block
-        margin: 0 0 0 20px
-        vertical-align: top
+        margin: 0 5px
+        &:nth-child(1)
+          margin-left: 0
 
 
-      .pic
-        width: 100px
-        height: 100px
-        border-radius: 20%
-        box-shadow: rgba(0, 0, 0, 0.0976562) 0px 2px 5px
-        border-width: 3px
-        border-style: solid
-        padding: 0px
-        border-color: rgb(255, 255, 255)
-      .links
-        list-style-type: none
-        -webkit-margin-before: 0
-        -webkit-margin-after: 0
-        -webkit-margin-start: 0
-        -webkit-margin-end: 0
-        -webkit-padding-start: 0
-
-        li
-          display: inline-block
-          margin: 0 5px
-          &:nth-child(1)
-            margin-left: 0
-
-
-    .about
-      .description
-      .experience, .projects
-        table
-          font-size: 11pt
-          -webkit-font-smoothing: antialiased
-          border-collapse: collapse
-          margin: 0.75em 0 1.5em 0
-          table-layout: fixed
-          width: 100%
-          color: #585858
-          border: 1px solid #e3e3e3
-          th
-            padding: 0.75em 0
-            padding: 0.5em 1em
-            text-align: left
-            border-right: 1px solid #e3e3e3
-            border-bottom: 1px solid #e3e3e3
+  .about
+    .description
+    .experience, .projects
+      table
+        font-size: 11pt
+        -webkit-font-smoothing: antialiased
+        border-collapse: collapse
+        margin: 0.75em 0 1.5em 0
+        table-layout: fixed
+        width: 100%
+        color: #585858
+        border: 1px solid #e3e3e3
+        th
+          padding: 0.75em 0
+          padding: 0.5em 1em
+          text-align: left
+          border-right: 1px solid #e3e3e3
+          border-bottom: 1px solid #e3e3e3
+        td
+          border-bottom: 1px solid #e3e3e3
+          padding: 0.75em 1em
+        tr, td th
+          vertical-align: middle
+        thead
+          tr
+            background: #f4f5f5
           td
-            border-bottom: 1px solid #e3e3e3
-            padding: 0.75em 1em
-          tr, td th
-            vertical-align: middle
-          thead
-            tr
-              background: #f4f5f5
-            td
-              font-weight: 700
+            font-weight: 700
