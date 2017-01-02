@@ -1,6 +1,12 @@
 // NumberWang!
 // ===========
 
+var MaxNumberWang = 25;
+
+function RandomNumberWang(){
+  return Math.floor(Math.random() * MaxNumberWang) + 1;
+}
+
 // Components
 // -----------
 
@@ -19,7 +25,7 @@ var socket = io.connect();
 Vue.component('numberwang', {
   template: '<div> \
              <h1> {{ number }} </h1> \
-             <p>The number has been changed <b>{{ clicked }}</b> times. Get the number to <b>{{target}}</b> to win a point! \
+             <h3>Target: <b>{{target}}</b></h3> \
              <p>{{ winner.name }} is winning with {{winner.points}} points! You have <b>{{ points }}</b> points.</p> \
              <button class="increase" v-on:click="increase">Increase</button> \
              <button class="decrease" v-on:click="decrease">Decrease</button> \
@@ -32,7 +38,7 @@ Vue.component('numberwang', {
       name: "",
       clicked: 0,
       connections: 0,
-      target: Math.floor(Math.random() * 10) + 1,
+      target: RandomNumberWang(),
       events: [],
       points: 0,
       winner: {
@@ -73,7 +79,7 @@ Vue.component('numberwang', {
     }.bind(this));
 
     socket.on('change', function(change){
-      this.events.unshift(change.event);
+      // this.events.unshift(change.event); // hiding other user clicks
       this.number = change.number;
       this.clicked = change.clicked;
       this.winner = change.winner;
@@ -83,7 +89,7 @@ Vue.component('numberwang', {
         var storage = JSON.parse(window.localStorage.numberwang);
         storage.points++;
         window.localStorage.numberwang = JSON.stringify(storage);
-        this.target = Math.floor(Math.random() * 10) + 1;
+        this.target = RandomNumberWang();
         this.events.unshift("That's NumberWang! Your new target is "+this.target+".");
         socket.emit('pointWon', 1);
       }

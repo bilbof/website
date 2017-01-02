@@ -5,7 +5,7 @@ var gameEvents  = require('../gameEvents.js');
 /* GET game */
 router.get('/', function(req, res, next){
   res.render('game', {
-    name:   "Inside Trader",
+    name:   "NumberWang!",
     events: gameEvents
   });
 })

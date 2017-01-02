@@ -1,5 +1,7 @@
 var _ = require('underscore');
 
+// webpack --progress --colors --watch --display-error-details
+
 module.exports = function(server){
   var io = require('socket.io')(server);
 
