@@ -15,11 +15,13 @@ router.get('/', function(req, res, next) {
     ],
     experience: [
       {date: "Apr 2015 - Present", role: "Success Engineer", org: "ChartMogul"},
-      {date: "Oct 2015 - Present", role: "Student", org: "Oxford University"},
+      {date: "Oct 2015 - Jun 2017", role: "Student", org: "Oxford University"},
       {date: "Apr 2014 - Apr 2015", role: "CMO", org: "Lavaboom"},
       {date: "Apr 2013 - August 2013", role: "Editor", org: "Pearson"}
     ],
     projects: [
+      {name: "Purser", technologies: "JavaScript", org: "Personal", link: "https://purser.herokuapp.com/"},
+      {name: "NumberWang", technologies: "Vue.js, Node.js, Webpack, Socket.io, Jade, Sass", org: "Personal", link: "/numberwang"},
       {name: "Chargebee integration", technologies: "Javascript (Node.js), MongoDB, Jade, Sass", org: "ChartMogul", link: "https://chargebee-chartmogul.herokuapp.com/"},
       {name: "Zendesk integration", technologies: "Javascript (Node.js, Ember), HTML, SCSS", org: "ChartMogul", link: "https://www.zendesk.com/apps/chartmogul/"},
       {name: "Google Sheets integration", technologies: "Javascript (GoogleScript), HTML, CSS", org: "ChartMogul", link: "https://chrome.google.com/webstore/detail/chartmogul/kpipbgelkcgkkeikmodggajbchfdnpcl?hl=en"},
