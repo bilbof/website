@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', {
     name: "Bill Franklin",
     headshot: "/images/bill.jpg",
-    description: "I work as a Customer Success Engineer at ChartMogul and study English Literature part-time at Oxford University.",
+    description: "I work as a Solutions Engineer at ChartMogul and study English Literature part-time at Oxford University.",
     menu: [
       {name:"Blog", url: "https://billfranklin.svbtle.com"},
       {name:"Twitter", url: "https://twitter.com/billfranklinuk"},
@@ -14,7 +14,8 @@ router.get('/', function(req, res, next) {
       {name: "LinkedIn", url: "https://uk.linkedin.com/in/franklinbill"}
     ],
     experience: [
-      {date: "Apr 2015 - Present", role: "Success Engineer", org: "ChartMogul"},
+      {date: "Apr 2017 - Present", role: "Solutions Engineer", org: "ChartMogul"},
+      {date: "Apr 2015 - Apr 2017", role: "Success Engineer", org: "ChartMogul"},
       {date: "Oct 2015 - Jun 2017", role: "Student", org: "Oxford University"},
       {date: "Apr 2014 - Apr 2015", role: "CMO", org: "Lavaboom"},
       {date: "Apr 2013 - August 2013", role: "Editor", org: "Pearson"}
