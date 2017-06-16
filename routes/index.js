@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', {
     name: "Bill Franklin",
     headshot: "/images/bill.jpg",
-    description: "I work as a Solutions Engineer at ChartMogul and study English Literature part-time at Oxford University.",
+    description: "I work as a Solutions Engineer at ChartMogul and study part-time at Oxford University.",
     menu: [
       {name:"Blog", url: "https://billfranklin.svbtle.com"},
       {name:"Twitter", url: "https://twitter.com/billfranklinuk"},
@@ -15,21 +15,23 @@ router.get('/', function(req, res, next) {
     ],
     experience: [
       {date: "Apr 2017 - Present", role: "Solutions Engineer", org: "ChartMogul"},
+      {date: "Oct 2017 - Present", role: "Student - Software Engineering MSc (part-time)", org: "Oxford University"},
+      {date: "Oct 2015 - Jun 2017", role: "Student - English Literature (part-time)", org: "Oxford University"},
       {date: "Apr 2015 - Apr 2017", role: "Success Engineer", org: "ChartMogul"},
-      {date: "Oct 2015 - Jun 2017", role: "Student", org: "Oxford University"},
       {date: "Apr 2014 - Apr 2015", role: "CMO", org: "Lavaboom"},
       {date: "Apr 2013 - August 2013", role: "Editor", org: "Pearson"}
     ],
     projects: [
+      {name: "Platform", technologies: "CoffeeScript (Backbone & Marionette), Ruby (Rails), SCSS, various", org: "Personal", link: "https://chartmogul.com/"},
       {name: "Purser", technologies: "JavaScript", org: "Personal", link: "https://purser.herokuapp.com/"},
       {name: "NumberWang", technologies: "Vue.js, Node.js, Webpack, Socket.io, Jade, Sass", org: "Personal", link: "/numberwang"},
-      {name: "Chargebee integration", technologies: "Javascript (Node.js), MongoDB, Jade, Sass", org: "ChartMogul", link: "https://chargebee-chartmogul.herokuapp.com/"},
+      {name: "Chargebee integration", technologies: "Javascript (Node.js), MongoDB, Jade, Sass", org: "ChartMogul", link: "https://chartmogul.com/system/chargebee/"},
       {name: "Zendesk integration", technologies: "Javascript (Node.js, Ember), HTML, SCSS", org: "ChartMogul", link: "https://www.zendesk.com/apps/chartmogul/"},
       {name: "Google Sheets integration", technologies: "Javascript (GoogleScript), HTML, CSS", org: "ChartMogul", link: "https://chrome.google.com/webstore/detail/chartmogul/kpipbgelkcgkkeikmodggajbchfdnpcl?hl=en"},
       {name: "Geckoboard integration", technologies: "Javascript (Node.js)", org: "ChartMogul", link: "https://github.com/bilbof/chartmogul-geckoboard"},
       {name: "Intercom integration", technologies: "Javascript (Node.js), MongoDB, Jade, CSS", org: "ChartMogul", link: "https://chartmogul-intercom.herokuapp.com/"},
       {name: "Mac OS X menu bar integration", technologies: "Python", org: "ChartMogul", link: "https://github.com/bilbof/chartmogul-menu"},
-      {name: "Various ChartMogul API integrations (IOS, PDF Export)", technologies: "Javascript, MongoDB, Jade, SCSS", org: "ChartMogul"},
+      {name: "Various ChartMogul API integrations", technologies: "Javascript, MongoDB, Jade, SCSS", org: "ChartMogul"},
       {name: "ChartMogul Command Line Interface (CLI)", technologies: "Javascript (Node.js)", org: "ChartMogul", link: "https://github.com/bilbof/chartmogul-cli"},
       {name: "ChartMogul Node.js client library", technologies: "Javascript (Node.js)", org: "ChartMogul", link: "https://github.com/bilbof/chartmogul-node"},
       {name: "German flashcard app", technologies: "HTML, CSS, Javascript (jQuery)", org: "Personal", link: "https://github.com/bilbof/Deutsch-app"},
