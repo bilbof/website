@@ -1,28 +1,47 @@
+// Variables
+$font-stack: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+$black: rgb(81, 86, 89)
+$light-black: rgb(86, 91, 94)
+$link-blue: rgb(27, 148, 214)
+$grey: rgb(255, 255, 255)
+$mobile-breakpoint: 450px
+$iphone-six: 455px
+
 .profile
-  padding: 50px
-  font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  padding: 20px
+  @media (min-width: $mobile-breakpoint)
+    padding: 50px
+  font: $font-stack
   a
-    color: rgb(27, 148, 214)
+    color: $link-blue
     text-decoration: none
     -webkit-transition: color 0.3s
     transition: color 0.3s
     &:hover
-      color: rgb(81, 86, 89)
+      color: $black
 
-  h1
-    margin: 35px 0 10px 0
-    color: rgb(81, 86, 89)
   p, td
     font-size: 0.9em
-    color: rgb(86, 91, 94)
+    color: $light-black
     line-height: 1.9em
     font-weight: 500
   .title
+    h1
+      margin: 35px 0 10px 0
+      @media (max-width: $mobile-breakpoint)
+        margin: 10px 0
+      color: $black
+      a
+        color: $black
+
     div
       display: inline-block
-      margin: 0 0 0 20px
-      vertical-align: top
+      @media (max-width: $mobile-breakpoint)
+        width: 100%
+      @media (min-width: $mobile-breakpoint)
+        margin: 0 0 0 20px
 
+      vertical-align: top
 
     .pic
       width: 100px
@@ -32,7 +51,7 @@
       border-width: 3px
       border-style: solid
       padding: 0px
-      border-color: rgb(255, 255, 255)
+      border-color: $grey
     .links
       list-style-type: none
       -webkit-margin-before: 0
@@ -47,32 +66,11 @@
         &:nth-child(1)
           margin-left: 0
 
-
-  .about
-    .description
-    .experience, .projects
-      table
-        font-size: 11pt
-        -webkit-font-smoothing: antialiased
-        border-collapse: collapse
-        margin: 0.75em 0 1.5em 0
-        table-layout: fixed
-        width: 100%
-        color: #585858
-        border: 1px solid #e3e3e3
-        th
-          padding: 0.75em 0
-          padding: 0.5em 1em
-          text-align: left
-          border-right: 1px solid #e3e3e3
-          border-bottom: 1px solid #e3e3e3
-        td
-          border-bottom: 1px solid #e3e3e3
-          padding: 0.75em 1em
-        tr, td th
-          vertical-align: middle
-        thead
-          tr
-            background: #f4f5f5
-          td
-            font-weight: 700
+  @media only screen and (max-device-width: 667px)
+    h1, .description, .title .links
+      font-size: 3em
+    .title .pic
+      width: 200px
+      height: 200px
+    .title .links li
+      margin: 10px

@@ -5,47 +5,16 @@ block content
     .title
       img.pic(src="#{headshot}", alt="alt")
       div
-        h1= name
+        h1: a(href="/") Bill Franklin
         if menu
           ul.links
             each item in menu
-                li 
+                li
                   a(href=item.url)= item.name
-          
+
     .about
       .description
-        p= description
-      if experience
-        .experience
-          h2 Experience
-          table
-            thead
-              tr
-                td Date
-                td Role
-                td Organisation
-            tbody
-              for item in experience
-                tr
-                  td= item.date
-                  td= item.role
-                  td= item.org
-      if projects
-        .projects
-          h2 Projects
-          table
-            thead
-              tr
-                td Project
-                td Technologies
-                td Organisation
-            tbody
-              for item in projects
-                tr
-                  if item.link
-                    td: a(href="#{item.link}") #{item.name}
-                  else
-                    td= item.name
-                  td= item.technologies
-                  td= item.org  
-
+        p Hello, my name is Bill. I work as a software engineer at ChartMogul and study Software Engineering at Oxford University.
+        p Previously I worked for a cybersecurity organisation, and the world's largest publisher. At University I studied object-oriented programming, database design, data mining, service-oriented architectures, machine learning, big data and cloud computing, algorithmics, computer forensics, security principles, and cloud security.
+        p I have professional experience with modern front-end development, Node.js, Ruby, and Go, in addition to SQL and NoSQL databases. During my studies I mainly wrote Java and Python.
+        p I enjoy rowing, and captained Christ Church college's Men's 3rd boat for Summer VIII's 2018.

@@ -1,3 +1,5 @@
 node_modules
 .saas-cache
+.sass-cache
 npm-debug.log
+.ruby-version

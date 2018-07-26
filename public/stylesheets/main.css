@@ -1,6 +1,9 @@
 .profile {
-  padding: 50px;
+  padding: 20px;
   font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  @media (min-width: 450px) {
+    .profile {
+      padding: 50px; } }
   .profile a {
     color: #1b94d6;
     text-decoration: none;
@@ -8,18 +11,28 @@
     transition: color 0.3s; }
     .profile a:hover {
       color: #515659; }
-  .profile h1 {
-    margin: 35px 0 10px 0;
-    color: #515659; }
   .profile p, .profile td {
     font-size: 0.9em;
     color: #565b5e;
     line-height: 1.9em;
     font-weight: 500; }
+  .profile .title h1 {
+    margin: 35px 0 10px 0;
+    color: #515659; }
+    @media (max-width: 450px) {
+      .profile .title h1 {
+        margin: 10px 0; } }
+    .profile .title h1 a {
+      color: #515659; }
   .profile .title div {
     display: inline-block;
-    margin: 0 0 0 20px;
     vertical-align: top; }
+    @media (max-width: 450px) {
+      .profile .title div {
+        width: 100%; } }
+    @media (min-width: 450px) {
+      .profile .title div {
+        margin: 0 0 0 20px; } }
   .profile .title .pic {
     width: 100px;
     height: 100px;
@@ -41,29 +54,13 @@
       margin: 0 5px; }
       .profile .title .links li:nth-child(1) {
         margin-left: 0; }
-  .profile .about .experience table, .profile .about .projects table {
-    font-size: 11pt;
-    -webkit-font-smoothing: antialiased;
-    border-collapse: collapse;
-    margin: 0.75em 0 1.5em 0;
-    table-layout: fixed;
-    width: 100%;
-    color: #585858;
-    border: 1px solid #e3e3e3; }
-    .profile .about .experience table th, .profile .about .projects table th {
-      padding: 0.75em 0;
-      padding: 0.5em 1em;
-      text-align: left;
-      border-right: 1px solid #e3e3e3;
-      border-bottom: 1px solid #e3e3e3; }
-    .profile .about .experience table td, .profile .about .projects table td {
-      border-bottom: 1px solid #e3e3e3;
-      padding: 0.75em 1em; }
-    .profile .about .experience table tr, .profile .about .experience table td th, .profile .about .projects table tr, .profile .about .projects table td th {
-      vertical-align: middle; }
-    .profile .about .experience table thead tr, .profile .about .projects table thead tr {
-      background: #f4f5f5; }
-    .profile .about .experience table thead td, .profile .about .projects table thead td {
-      font-weight: 700; }
+  @media only screen and (max-device-width: 667px) {
+    .profile h1, .profile .description, .profile .title .links {
+      font-size: 3em; }
+    .profile .title .pic {
+      width: 200px;
+      height: 200px; }
+    .profile .title .links li {
+      margin: 10px; } }
 
 /*# sourceMappingURL=main.css.map */
