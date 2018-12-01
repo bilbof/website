@@ -3,7 +3,6 @@ var logger    = require('morgan');
 var path      = require('path');
 var http      = require('http');
 var routes    = require('./routes/index');
-var game      = require('./routes/game');
 var debug     = require('debug')('billfranklin:server');
 var app       = express();
 
@@ -18,7 +17,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
-app.use('/numberwang', game);
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
@@ -28,8 +26,6 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-
-var connection = require('./controllers/socket/connection.js')(server);
 
 /**
  * Normalize a port into a number, string, or false.
